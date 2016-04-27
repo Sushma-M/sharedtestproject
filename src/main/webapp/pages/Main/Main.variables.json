@@ -1,0 +1,61 @@
+{
+  "mapsprefab" : {
+    "_id" : "wm-mapsprefab-wm.Variable-1461736766189",
+    "name" : "mapsprefab",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "coords" : {
+        "lat" : 41.428146,
+        "lng" : -73.918993
+      },
+      "icon" : "http://maps.google.com/mapfiles/ms/micons/water.png",
+      "info" : "Hudson River",
+      "radius" : 12345,
+      "color" : "#5133AB"
+    }, {
+      "coords" : {
+        "lat" : 40.712397,
+        "lng" : -74.005469
+      },
+      "icon" : "http://maps.google.com/mapfiles/ms/micons/arts.png",
+      "info" : "New York",
+      "radius" : 12345,
+      "color" : "#0BC86E"
+    }, {
+      "coords" : {
+        "lat" : 39.366105,
+        "lng" : -74.436832
+      },
+      "icon" : "http://maps.google.com/mapfiles/ms/micons/dollar.png",
+      "info" : "Atlantic City",
+      "radius" : 12345,
+      "color" : "#264B7F"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "waypoints" : {
+    "_id" : "wm-waypoints-wm.Variable-1461736791059",
+    "name" : "waypoints",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "location" : {
+        "lat" : 12.972442,
+        "lng" : 77.580643
+      }
+    }, {
+      "location" : {
+        "lat" : 15.2993,
+        "lng" : 74.124
+      }
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

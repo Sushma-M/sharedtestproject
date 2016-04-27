@@ -8,7 +8,7 @@
                 <wm-tabpane name="tabpane1">
                     <wm-tabheader name="tabheader1" heading="gmaps"></wm-tabheader>
                     <wm-tabcontent name="tabcontent1">
-                        <wm-prefab prefabname="googlemaps" name="googlemaps1"></wm-prefab>
+                        <wm-prefab prefabname="googlemaps" name="googlemaps1" locations="bind:Variables.mapsprefab.dataSet" lat="coords.lat" lng="coords.lng" icon="icon" info="info" shade="color" radius="radius" origin="Hyderabad" destination="Kerala" waypoints="bind:Variables.waypoints.dataSet"></wm-prefab>
                     </wm-tabcontent>
                 </wm-tabpane>
                 <wm-tabpane name="tabpane2">
@@ -19,7 +19,15 @@
                 </wm-tabpane>
                 <wm-tabpane name="tabpane3">
                     <wm-tabheader name="tabheader3" heading="Youtube"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent3"></wm-tabcontent>
+                    <wm-tabcontent name="tabcontent3">
+                        <wm-prefab prefabname="youtube" name="youtube1"></wm-prefab>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane4">
+                    <wm-tabheader name="tabheader4" heading="QRCODE"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent4">
+                        <wm-prefab prefabname="QRCode" name="QRCode1"></wm-prefab>
+                    </wm-tabcontent>
                 </wm-tabpane>
             </wm-tabs>
             <wm-panel class="panel-primary" name="panel1" title="File Upload Scenarios">

@@ -21,7 +21,67 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 }]);
 </script>
 <script id="Main.variables.json">
-var _MainPage_Variables_ ={}
+var _MainPage_Variables_ ={
+  "mapsprefab" : {
+    "_id" : "wm-mapsprefab-wm.Variable-1461736766189",
+    "name" : "mapsprefab",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "coords" : {
+        "lat" : 41.428146,
+        "lng" : -73.918993
+      },
+      "icon" : "http://maps.google.com/mapfiles/ms/micons/water.png",
+      "info" : "Hudson River",
+      "radius" : 12345,
+      "color" : "#5133AB"
+    }, {
+      "coords" : {
+        "lat" : 40.712397,
+        "lng" : -74.005469
+      },
+      "icon" : "http://maps.google.com/mapfiles/ms/micons/arts.png",
+      "info" : "New York",
+      "radius" : 12345,
+      "color" : "#0BC86E"
+    }, {
+      "coords" : {
+        "lat" : 39.366105,
+        "lng" : -74.436832
+      },
+      "icon" : "http://maps.google.com/mapfiles/ms/micons/dollar.png",
+      "info" : "Atlantic City",
+      "radius" : 12345,
+      "color" : "#264B7F"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "waypoints" : {
+    "_id" : "wm-waypoints-wm.Variable-1461736791059",
+    "name" : "waypoints",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "location" : {
+        "lat" : 12.972442,
+        "lng" : 77.580643
+      }
+    }, {
+      "location" : {
+        "lat" : 15.2993,
+        "lng" : 74.124
+      }
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
@@ -34,7 +94,7 @@ var _MainPage_Variables_ ={}
                 <wm-tabpane name="tabpane1">
                     <wm-tabheader name="tabheader1" heading="gmaps"></wm-tabheader>
                     <wm-tabcontent name="tabcontent1">
-                        <wm-prefab prefabname="googlemaps" name="googlemaps1"></wm-prefab>
+                        <wm-prefab prefabname="googlemaps" name="googlemaps1" locations="bind:Variables.mapsprefab.dataSet" lat="coords.lat" lng="coords.lng" icon="icon" info="info" shade="color" radius="radius" origin="Hyderabad" destination="Kerala" waypoints="bind:Variables.waypoints.dataSet"></wm-prefab>
                     </wm-tabcontent>
                 </wm-tabpane>
                 <wm-tabpane name="tabpane2">
@@ -45,7 +105,15 @@ var _MainPage_Variables_ ={}
                 </wm-tabpane>
                 <wm-tabpane name="tabpane3">
                     <wm-tabheader name="tabheader3" heading="Youtube"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent3"></wm-tabcontent>
+                    <wm-tabcontent name="tabcontent3">
+                        <wm-prefab prefabname="youtube" name="youtube1"></wm-prefab>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane4">
+                    <wm-tabheader name="tabheader4" heading="QRCODE"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent4">
+                        <wm-prefab prefabname="QRCode" name="QRCode1"></wm-prefab>
+                    </wm-tabcontent>
                 </wm-tabpane>
             </wm-tabs>
             <wm-panel class="panel-primary" name="panel1" title="File Upload Scenarios">
@@ -87,4 +155,5 @@ var _MainPage_Variables_ ={}
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>
+
 </script>
