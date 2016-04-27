@@ -256,7 +256,7 @@
     "pageTransitions" : "none"
   },
   "SampleDB33SampleData" : {
-    "_id" : "wm-SampleDB33SampleData-wm.LiveVariable-1461740479235",
+    "_id" : "wm-SampleDB33SampleData-wm.LiveVariable-1461740631112",
     "name" : "SampleDB33SampleData",
     "owner" : "App",
     "category" : "wm.LiveVariable",
@@ -352,24 +352,5 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
-  },
-  "appNotification": {
-      "_id": "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-      "name": "appNotification",
-      "owner": "App",
-      "category": "wm.NotificationVariable",
-      "dataBinding": [
-        {
-          "target": "class",
-          "value": "Error",
-          "type": "list"
-        },
-        {
-          "target": "toasterPosition",
-          "value": "bottom right",
-          "type": "list"
-        }
-      ],
-      "operation": "toast"
-    }
+  }
 }

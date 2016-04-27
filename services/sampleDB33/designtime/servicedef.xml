@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="sampleDB33" type="DataService" springFile="sampleDB33.spring.xml">
     <dataobjects>
+        <dataobject javaType="com.sharedtestproject.sampledb33.User">
+            <element name="joiningDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dob" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.sharedtestproject.sampledb33.Sample">
             <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="timecol" typeRef="java.util.Date" allowNull="true"/>

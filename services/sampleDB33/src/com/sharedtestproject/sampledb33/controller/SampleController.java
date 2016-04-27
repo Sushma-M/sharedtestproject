@@ -73,14 +73,6 @@ public class SampleController {
         return WMMultipartUtils.buildDownloadResponseForBlob(instance, fieldName, httpServletRequest, download);
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST, consumes = { "multipart/form-data" })
-    @ApiOperation(value = "Creates a new Sample instance.This API should be used when the Sample instance has fields that requires multipart data.")
-    public Sample createSample(MultipartHttpServletRequest multipartHttpServletRequest) {
-        Sample sample = WMMultipartUtils.toObject(multipartHttpServletRequest, Sample.class, "sampleDB33");
-        LOGGER.debug("Creating a new sample with information: {}", sample);
-        return sampleService.create(sample);
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -98,6 +90,15 @@ public class SampleController {
         instance = sampleService.create(instance);
         LOGGER.debug("Created Sample with information: {}", instance);
         return instance;
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.POST, consumes = { "multipart/form-data" })
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Sample instance.")
+    public Sample createSample(MultipartHttpServletRequest multipartHttpServletRequest) {
+        Sample sample = WMMultipartUtils.toObject(multipartHttpServletRequest, Sample.class, "sampleDB33");
+        LOGGER.debug("Creating a new sample with information: {}", sample);
+        return sampleService.create(sample);
     }
 
     @RequestMapping(value = "/count", method = RequestMethod.GET)
