@@ -1,4 +1,5 @@
 var _WM_APP_PROPERTIES = {
+  "activeTheme" : "default",
   "defaultLanguage" : "en",
   "displayName" : "SharedTestProject",
   "homePage" : "Main",

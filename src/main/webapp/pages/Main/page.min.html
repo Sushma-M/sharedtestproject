@@ -30,6 +30,24 @@ var _MainPage_Variables_ ={}
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
         <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1">
+                    <wm-tabheader name="tabheader1" heading="gmaps"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-prefab prefabname="googlemaps" name="googlemaps1"></wm-prefab>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2">
+                    <wm-tabheader name="tabheader2" heading="FBPost"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent2">
+                        <wm-prefab prefabname="fbpost" name="fbpost1" height="565" appid="235401466622053"></wm-prefab>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3">
+                    <wm-tabheader name="tabheader3" heading="Youtube"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent3"></wm-tabcontent>
+                </wm-tabpane>
+            </wm-tabs>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
