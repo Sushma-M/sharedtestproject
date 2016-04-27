@@ -5,6 +5,8 @@
 .post-button {
     position: static;
 }
+
+
 </style>
 <script id="Main.js">
 Application.$controller('FbpostController', ['$scope', '$rootScope', '$location', '$timeout', 'wmToaster',
@@ -62,6 +64,19 @@ Application.$controller('FbpostController', ['$scope', '$rootScope', '$location'
             }, 5000);
         }
 
+        function getValidJSON(content) {
+            if (!content) {
+                return false;
+            }
+            try {
+                /*obtaining json from editor content string*/
+                return JSON.parse(content);
+            } catch (e) {
+                /*terminating execution if new variable object is not valid json.*/
+                return false;
+            }
+        }
+
         $scope.postToFB = function () {
             $scope.loadingState = true;
             SBW.api.postShare(['facebook'], {
@@ -98,12 +113,66 @@ Application.$controller('FbpostController', ['$scope', '$rootScope', '$location'
 ]);
 </script>
 <script id="Main.variables.json">
-var _MainPage_Variables_ ={}
+var _MainPage_Variables_ ={
+  "supportedLocale": {
+    "name": "supportedLocale",
+    "type": "string",
+    "isList": false,
+    "owner": "Page",
+    "dataSet": {
+      "en": "English"
+    },
+    "dataBinding": [],
+    "saveInPhonegap": false,
+    "category": "wm.Variable",
+    "_id": "wm-wm.Variable1402640443182"
+  },
+  "FileServiceUploadFile": {
+    "isList": false,
+    "owner": "Page",
+    "dataSet": {
+      "dataValue": ""
+    },
+    "dataBinding": [],
+    "saveInPhonegap": false,
+    "firstRow": 0,
+    "maxResults": 20,
+    "designMaxResults": 10,
+    "service": "FileService",
+    "operation": "uploadFile",
+    "startUpdate": false,
+    "autoUpdate": true,
+    "inFlightBehavior": "executeLast",
+    "transformationRequired": false,
+    "serviceType": "JavaService",
+    "category": "wm.ServiceVariable",
+    "isDefault": true,
+    "wmServiceOperationInfo": {
+      "methodType": "post",
+      "name": "uploadFile",
+      "relativePath": "/file/uploadFile",
+      "consumes": [
+        "multipart/form-data"
+      ],
+      "parameters": [
+        {
+          "name": "files",
+          "parameterType": "formData"
+        },
+        {
+          "name": "relativePath",
+          "parameterType": "query"
+        }
+      ]
+    },
+    "_id": "wm-FileServiceUploadFile-wm.ServiceVariable-1440406140580"
+  }
+}
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page data-ng-controller="FbpostController" name="fbPostPrefab">
     <wm-view backgroundcolor="#fff" name="fbPostView">
-        <wm-panel backgroundcolor="#f9f9f9" name="prefabPanel" bordercolor="#d3dae8" borderstyle="solid" bordertop="1" borderleft="1" borderright="1" borderbottom="1" paddingtop="2" paddingright="2" paddingleft="2" paddingbottom="2" paddingunit="em" height="100%">
+        <wm-tile backgroundcolor="#f9f9f9" name="prefabPanel" bordercolor="#d3dae8" borderstyle="solid" bordertop="1" borderleft="1" borderright="1" borderbottom="1" paddingtop="2" paddingright="2" paddingleft="2" paddingbottom="2" paddingunit="em" height="100%">
             <wm-spinner name="loadingstate" show="{{loadingState}}"></wm-spinner>
             <wm-message name="message" show="{{msg.show}}" caption="{{msg.desc}}" type="{{msg.type}}" hide-close="true" paddingtop="8" paddingbottom="8" paddingright="8" paddingleft="8" paddingunit="px"></wm-message>
             <wm-composite widget="text" name="campaignName">
@@ -126,16 +195,12 @@ var _MainPage_Variables_ ={}
                 <wm-label class="col-md-2" name="descLabel" caption="Description" lineheight="36px"></wm-label>
                 <wm-textarea scopedatavalue="model.description" placeholder="Enter campaign description" name="desc"></wm-textarea>
             </wm-composite>
-            <wm-composite name="uploadPicPanel" minheight="0" overflow="hidden">
-                <wm-column columnwidth="2" name="uploadlabelColumn">
-                    <wm-label name="uploadlabel" caption="Upload" textalign="left"></wm-label>
-                </wm-column>
-                <wm-column columnwidth="10" name="picUploadColumn" class="pic-upload-column" width="auto">
-                    <wm-fileupload name="picUpload" singlefileupload="true" textalign="center" backgroundcolor="#f9f9f9" paddingleft="0" paddingright="0" paddingunit="px" on-success="picUploadSuccess($event, params)"></wm-fileupload>
-                </wm-column>
+            <wm-composite name="uploadPicPanel">
+                <wm-label class="col-md-2" name="uploadlabel" caption="Upload"></wm-label>
+                <wm-fileupload name="picUpload" service="FileService" operation="uploadFile" backgroundcolor="#f9f9f9" paddingleft="0" paddingright="0" paddingunit="px" on-success="picUploadSuccess($event, params)"></wm-fileupload>
             </wm-composite>
-            <wm-button width="150" on-click="postToFB()" caption="Post to Facebook" name="postToFB" backgroundcolor="#4c69ba" color="#fff" class="col-md-push-1"></wm-button>
-        </wm-panel>
+            <wm-button class="post-button col-md-push-1" width="150" on-click="postToFB()" caption="Post to Facebook" name="postToFB" backgroundcolor="#4c69ba" color="#fff"></wm-button>
+        </wm-tile>
     </wm-view>
 </wm-page>
 </script>
