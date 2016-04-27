@@ -23,6 +23,9 @@
   "name" : "rightnav",
   "type" : "RIGHTNAV"
 }, {
+  "name" : "testpage_2",
+  "type" : "PAGE"
+}, {
   "name" : "topnav",
   "type" : "TOPNAV"
 } ]

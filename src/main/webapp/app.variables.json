@@ -245,6 +245,16 @@
     "pageName" : "TestPage1",
     "pageTransitions" : "none"
   },
+  "goToPage_testpage_2" : {
+    "_id" : "wm-goToPage_testpage_2-wm.NavigationVariable-1461739162660",
+    "name" : "goToPage_testpage_2",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "testpage_2",
+    "pageTransitions" : "none"
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",

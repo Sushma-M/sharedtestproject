@@ -1,0 +1,45 @@
+<style id="testpage_2.css">
+
+</style>
+<script id="testpage_2.js">
+Application.$controller("testpage_2PageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="testpage_2.variables.json">
+var _testpage_2Page_Variables_ ={}
+</script>
+<script id="testpage_2.html" type="text/ng-template">
+<wm-page name="page1" data-ng-controller="testpage_2PageController" pagetitle="Testpage 2">
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-list name="list1"></wm-list>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+            <wm-panel name="panel1" class="panel-primary">
+                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>
