@@ -94,15 +94,6 @@ public class ProductlinesController {
         this.productlinesService = service;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST, consumes = { "multipart/form-data" })
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "Creates a new Productlines instance.This API should be used when the Productlines instance has fields that requires multipart data.")
-    public Productlines createProductlines(MultipartHttpServletRequest multipartHttpServletRequest) {
-        Productlines productlines = WMMultipartUtils.toObject(multipartHttpServletRequest, Productlines.class, "classicmodels");
-        LOGGER.debug("Creating a new productlines with information: {}", productlines);
-        return productlinesService.create(productlines);
-    }
-
     @RequestMapping(value = "/", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Creates a new Productlines instance.")
@@ -111,6 +102,15 @@ public class ProductlinesController {
         instance = productlinesService.create(instance);
         LOGGER.debug("Created Productlines with information: {}", instance);
         return instance;
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.POST, consumes = { "multipart/form-data" })
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Productlines instance.")
+    public Productlines createProductlines(MultipartHttpServletRequest multipartHttpServletRequest) {
+        Productlines productlines = WMMultipartUtils.toObject(multipartHttpServletRequest, Productlines.class, "classicmodels");
+        LOGGER.debug("Creating a new productlines with information: {}", productlines);
+        return productlinesService.create(productlines);
     }
 
     @RequestMapping(value = "/count", method = RequestMethod.GET)
