@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="CountryInfoService" type="SoapService" springFile="CountryInfoService.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryCodeAndName" name="ArrayOftCountryCodeAndName">
+            <element name="tCountryCodeAndName" typeRef="com.sharedtestproject.services.countryinfoservice.TCountryCodeAndName" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CountryNameResponse" name="CountryNameResponse">
+            <element name="countryNameResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfContinentsByCodeResponse" name="ListOfContinentsByCodeResponse">
+            <element name="listOfContinentsByCodeResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftContinent" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CountryCurrencyResponse" name="CountryCurrencyResponse">
+            <element name="countryCurrencyResult" typeRef="com.sharedtestproject.services.countryinfoservice.TCurrency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfCurrenciesByCodeResponse" name="ListOfCurrenciesByCodeResponse">
+            <element name="listOfCurrenciesByCodeResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCurrency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryInfo" name="ArrayOftCountryInfo">
+            <element name="tCountryInfo" typeRef="com.sharedtestproject.services.countryinfoservice.TCountryInfo" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfCountryNamesGroupedByContinentResponse" name="ListOfCountryNamesGroupedByContinentResponse">
+            <element name="listOfCountryNamesGroupedByContinentResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryCodeAndNameGroupedByContinent" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryCodeAndNameGroupedByContinent" name="ArrayOftCountryCodeAndNameGroupedByContinent">
+            <element name="tCountryCodeAndNameGroupedByContinent" typeRef="com.sharedtestproject.services.countryinfoservice.TCountryCodeAndNameGroupedByContinent" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ArrayOftContinent" name="ArrayOftContinent">
+            <element name="tContinent" typeRef="com.sharedtestproject.services.countryinfoservice.TContinent" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfCountryNamesByCodeResponse" name="ListOfCountryNamesByCodeResponse">
+            <element name="listOfCountryNamesByCodeResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryCodeAndName" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.TCountryCodeAndName" name="TCountryCodeAndName">
+            <element name="sisoCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.FullCountryInfoResponse" name="FullCountryInfoResponse">
+            <element name="fullCountryInfoResult" typeRef="com.sharedtestproject.services.countryinfoservice.TCountryInfo" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfContinentsByNameResponse" name="ListOfContinentsByNameResponse">
+            <element name="listOfContinentsByNameResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftContinent" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ArrayOftLanguage" name="ArrayOftLanguage">
+            <element name="tLanguage" typeRef="com.sharedtestproject.services.countryinfoservice.TLanguage" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CountryFlagResponse" name="CountryFlagResponse">
+            <element name="countryFlagResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.LanguageNameResponse" name="LanguageNameResponse">
+            <element name="languageNameResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CountryIntPhoneCodeResponse" name="CountryIntPhoneCodeResponse">
+            <element name="countryIntPhoneCodeResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.FullCountryInfoAllCountriesResponse" name="FullCountryInfoAllCountriesResponse">
+            <element name="fullCountryInfoAllCountriesResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryInfo" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfLanguagesByNameResponse" name="ListOfLanguagesByNameResponse">
+            <element name="listOfLanguagesByNameResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftLanguage" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfLanguagesByCodeResponse" name="ListOfLanguagesByCodeResponse">
+            <element name="listOfLanguagesByCodeResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftLanguage" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.TCountryCodeAndNameGroupedByContinent" name="TCountryCodeAndNameGroupedByContinent">
+            <element name="continent" typeRef="com.sharedtestproject.services.countryinfoservice.TContinent" allowNull="true"/>
+            <element name="countryCodeAndNames" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryCodeAndName" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CountriesUsingCurrencyResponse" name="CountriesUsingCurrencyResponse">
+            <element name="countriesUsingCurrencyResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryCodeAndName" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.TLanguage" name="TLanguage">
+            <element name="sisoCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfCurrenciesByNameResponse" name="ListOfCurrenciesByNameResponse">
+            <element name="listOfCurrenciesByNameResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCurrency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.LanguageISOCodeResponse" name="LanguageISOCodeResponse">
+            <element name="languageISOCodeResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.TContinent" name="TContinent">
+            <element name="sCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.TCountryInfo" name="TCountryInfo">
+            <element name="sisoCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="languages" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftLanguage" allowNull="true"/>
+            <element name="sCapitalCity" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sPhoneCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sContinentCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sCurrencyISOCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sCountryFlag" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CountryISOCodeResponse" name="CountryISOCodeResponse">
+            <element name="countryISOCodeResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.TCurrency" name="TCurrency">
+            <element name="sisoCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ListOfCountryNamesByNameResponse" name="ListOfCountryNamesByNameResponse">
+            <element name="listOfCountryNamesByNameResult" typeRef="com.sharedtestproject.services.countryinfoservice.ArrayOftCountryCodeAndName" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CapitalCityResponse" name="CapitalCityResponse">
+            <element name="capitalCityResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.ArrayOftCurrency" name="ArrayOftCurrency">
+            <element name="tCurrency" typeRef="com.sharedtestproject.services.countryinfoservice.TCurrency" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.sharedtestproject.services.countryinfoservice.CurrencyNameResponse" name="CurrencyNameResponse">
+            <element name="currencyNameResult" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

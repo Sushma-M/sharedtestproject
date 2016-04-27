@@ -1,0 +1,23 @@
+{
+  "username" : "{WM_CLOUD_MYSQL_USER_NAME}",
+  "password" : "{WM_CLOUD_MYSQL_PASSWORD}",
+  "url" : "jdbc:mysql://{WM_CLOUD_MYSQL_HOST}/classicmodels?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "classicmodels",
+  "packageName" : "com.sharedtestproject.classicmodels",
+  "dbType" : "MySQL",
+  "host" : "{WM_CLOUD_MYSQL_HOST}",
+  "dbName" : "classicmodels",
+  "port" : "",
+  "schemaName" : null,
+  "tableFilter" : [ "article_tags", "customers", "employees", "offices", "orderdetails", "orders", "payments", "productlines", "products" ],
+  "schemaFilter" : [ ".*" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "update",
+  "maxPageSize" : 100,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "readOnly" : false
+}

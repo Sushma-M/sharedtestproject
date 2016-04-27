@@ -29,41 +29,77 @@
                         <wm-prefab prefabname="QRCode" name="QRCode1"></wm-prefab>
                     </wm-tabcontent>
                 </wm-tabpane>
+                <wm-tabpane name="tabpane4">
+                    <wm-tabheader name="tabheader4" heading="List"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent4">
+                        <wm-livelist listclass="list-group" itemsperrow="3" template="true" dataset="bind:Variables.ClassicmodelsProductlinesData.dataSet" navigation="None" name="livelist2">
+                            <wm-listtemplate layout="media" name="listtemplate2">
+                                <wm-card name="Action Card" picturesource="bind:Variables.ClassicmodelsProductlinesData.dataSet.image" picturetitle="bind:Variables.ClassicmodelsProductlinesData.dataSet.productLine">
+                                    <wm-card-actions horizontalalign="right" name="card_actions2">
+                                        <wm-button iconclass="wi wi-heart" class="btn-transparent" name="button9_1"></wm-button>
+                                        <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-bookmark" name="button10"></wm-button>
+                                        <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-share" name="button11"></wm-button>
+                                    </wm-card-actions>
+                                </wm-card>
+                            </wm-listtemplate>
+                        </wm-livelist>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane5">
+                    <wm-tabheader name="tabheader5" heading="SOAP"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent5">
+                        <wm-livelist listclass="list-group" itemsperrow="3" template="true" dataset="bind:Variables.CountryInfoServiceFullCountryInfoAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo" navigation="Pager" name="livelist3">
+                            <wm-listtemplate layout="media" name="listtemplate3">
+                                <wm-card name="Action Card" picturesource="bind:Variables.CountryInfoServiceFullCountryInfoAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo.sCountryFlag" picturetitle="bind:Variables.CountryInfoServiceFullCountryInfoAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo.sName">
+                                    <wm-card-actions horizontalalign="right" name="card_actions3">
+                                        <wm-button iconclass="wi wi-heart" class="btn-transparent" name="button12"></wm-button>
+                                        <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-bookmark" name="button13"></wm-button>
+                                        <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-share" name="button14"></wm-button>
+                                    </wm-card-actions>
+                                </wm-card>
+                            </wm-listtemplate>
+                        </wm-livelist>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane8">
+                    <wm-tabheader name="tabheader8"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent8">
+                        <wm-panel class="panel-primary" name="panel1" title="File Upload Scenarios">
+                            <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload>
+                            <wm-container name="container1" margintop="10" marginbottom="10">
+                                <wm-button class="btn-default" caption="Download" type="button" name="button1" on-click="FileServiceGetDownloadFile"></wm-button>
+                            </wm-container>
+                            <wm-container margintop="10" marginbottom="10" name="container2">
+                                <wm-button class="btn-default" caption="Download as inline" type="button" name="button2" on-click="FileServiceGetDownloadFileAsInline"></wm-button>
+                            </wm-container>
+                            <wm-container margintop="10" marginbottom="10" name="container4">
+                                <wm-button class="btn-default" caption="Delete" type="button" name="button3" on-click="FileServiceDeleteFile"></wm-button>
+                            </wm-container>
+                            <wm-container margintop="10" marginbottom="10" name="container5">
+                                <wm-button class="btn-default" caption="List files" type="button" name="button4" on-click="FileServiceListFiles"></wm-button>
+                            </wm-container>
+                            <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.FileServiceListFiles.dataSet" navigation="None" name="livelist1">
+                                <wm-listtemplate layout="media" name="listtemplate1">
+                                    <wm-card name="Action Card" picturesource="bind:Variables.FileServiceListFiles.dataSet.path" picturetitle="bind:Variables.FileServiceListFiles.dataSet.name">
+                                        <wm-card-actions horizontalalign="right" name="card_actions1">
+                                            <wm-button iconclass="wi wi-heart" class="btn-transparent" name="button5"></wm-button>
+                                            <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-bookmark" name="button6"></wm-button>
+                                            <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-share" name="button7"></wm-button>
+                                        </wm-card-actions>
+                                    </wm-card>
+                                </wm-listtemplate>
+                            </wm-livelist>
+                            <wm-container margintop="10" marginbottom="10" name="container6">
+                                <wm-fileupload name="fileupload2" caption="Select" mode="Select" service="FileService" operation="uploadFile"></wm-fileupload>
+                            </wm-container>
+                            <wm-container margintop="10" marginbottom="10" name="container7">
+                                <wm-button class="btn-default" caption="Upload" type="button" on-click="FileServiceUploadFile" name="button9"></wm-button>
+                            </wm-container>
+                            <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                        </wm-panel>
+                    </wm-tabcontent>
+                </wm-tabpane>
             </wm-tabs>
-            <wm-panel class="panel-primary" name="panel1" title="File Upload Scenarios">
-                <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload>
-                <wm-container name="container1" margintop="10" marginbottom="10">
-                    <wm-button class="btn-default" caption="Download" type="button" name="button1" on-click="FileServiceGetDownloadFile"></wm-button>
-                </wm-container>
-                <wm-container margintop="10" marginbottom="10" name="container2">
-                    <wm-button class="btn-default" caption="Download as inline" type="button" name="button2" on-click="FileServiceGetDownloadFileAsInline"></wm-button>
-                </wm-container>
-                <wm-container margintop="10" marginbottom="10" name="container4">
-                    <wm-button class="btn-default" caption="Delete" type="button" name="button3" on-click="FileServiceDeleteFile"></wm-button>
-                </wm-container>
-                <wm-container margintop="10" marginbottom="10" name="container5">
-                    <wm-button class="btn-default" caption="List files" type="button" name="button4" on-click="FileServiceListFiles"></wm-button>
-                </wm-container>
-                <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.FileServiceListFiles.dataSet" navigation="None" name="livelist1">
-                    <wm-listtemplate layout="media" name="listtemplate1">
-                        <wm-card name="Action Card" picturesource="bind:Variables.FileServiceListFiles.dataSet.path" picturetitle="bind:Variables.FileServiceListFiles.dataSet.name">
-                            <wm-card-actions horizontalalign="right" name="card_actions1">
-                                <wm-button iconclass="wi wi-heart" class="btn-transparent" name="button5"></wm-button>
-                                <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-bookmark" name="button6"></wm-button>
-                                <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-share" name="button7"></wm-button>
-                            </wm-card-actions>
-                        </wm-card>
-                    </wm-listtemplate>
-                </wm-livelist>
-                <wm-container margintop="10" marginbottom="10" name="container6">
-                    <wm-fileupload name="fileupload2" caption="Select" mode="Select" service="FileService" operation="uploadFile"></wm-fileupload>
-                </wm-container>
-                <wm-container margintop="10" marginbottom="10" name="container7">
-                    <wm-button class="btn-default" caption="Upload" type="button" on-click="FileServiceUploadFile" name="button9"></wm-button>
-                </wm-container>
-
-                <wm-panel-footer name="panel_footer1"></wm-panel-footer>
-            </wm-panel>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
