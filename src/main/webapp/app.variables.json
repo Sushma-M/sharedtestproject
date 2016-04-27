@@ -255,6 +255,16 @@
     "pageName" : "testpage_2",
     "pageTransitions" : "none"
   },
+  "goToPage_UserTemplatePage" : {
+    "_id" : "wm-goToPage_UserTemplatePage-wm.NavigationVariable-1461741278825",
+    "name" : "goToPage_UserTemplatePage",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "UserTemplatePage",
+    "pageTransitions" : "none"
+  },
   "SampleDB33SampleData" : {
     "_id" : "wm-SampleDB33SampleData-wm.LiveVariable-1461740631112",
     "name" : "SampleDB33SampleData",

@@ -11,6 +11,9 @@
   "name" : "TestPage1",
   "type" : "PAGE"
 }, {
+  "name" : "UserTemplatePage",
+  "type" : "PAGE"
+}, {
   "name" : "footer",
   "type" : "FOOTER"
 }, {
