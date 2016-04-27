@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="sampleDB33" type="DataService" springFile="sampleDB33.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.sharedtestproject.sampledb33.Sample">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="timecol" typeRef="java.util.Date" allowNull="true"/>
+            <element name="sample1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="blobtype" typeRef="java.lang.String" isList="true" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>
